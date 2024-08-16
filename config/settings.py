@@ -147,8 +147,8 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
 
-CELERY_BROKER_URL = 'redis://localhost:6379'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_BROKER_URL = os.getenv('CELERY_URL')
+CELERY_RESULT_BACKEND = os.getenv('CELERY_URL')
 
 API_KEY_TELEGRAM_BOT = os.getenv('API_KEY_TELEGRAM_BOT')
 
